@@ -1,18 +1,18 @@
 # MinifiedCssGulp
-Utilizando gulp para minificar meus arquivos css :tropical_drink:
+Using gulp to minify my css files :tropical_drink:
 
-## Como utilizar
+## How to use
 
-Com o gerenciador de pacotes npm instalado digite:
+With the npm package manager installed enter:
 
 > npm install gulp
 
 
-Logo depois dentro do projeto base instale a dependecia do gulp para minificar arquivos css
+Shortly afterward within the base project installs the gulp dependency to minify CSS files
 
 > npm install gulp-clean-css --save-dev
 
-### Pronto, agora quando quiser deixar o gulp rodando em background utilize o comando 
-> gulp 
+### Okay, now when you want to leave the gulp running in the background use the command
+> gulp
 
-Arquivos css ficam dentro da pasta styles, os minificados irão para a pasta dist, para personalizar altere no arquivo Gulpfile.js
+CSS files are inside the styles folder, the mins will go to the dist folder, to customize change in the Gulpfile.js file

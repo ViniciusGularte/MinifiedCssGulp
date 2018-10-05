@@ -1,19 +1,19 @@
 let gulp = require('gulp');
 let cleanCSS = require('gulp-clean-css');
-// Tarefa para minificar css utilizando pacote cleanCSs
+// Task to minify css using package cleanCSs
 gulp.task('minify-css', () => {
-  //Pasta com arquivos para minificar
+  // Folder with files to minify
   return gulp.src('styles/*.css')
-     //Defino compatibilidade com IE 8
+     //I define compatibility with IE 8
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    //Defino o destino dos arquivos minificados
+    //I define the destination of the minified files
     .pipe(gulp.dest('dist'));
 });
 
-//Criamos uma tarefa 'default' que vai rodar quando rodamos `gulp` no projeto
+//We create a 'default' task that will run when we run `gulp` in the project
 gulp.task('default', function() {
-// Usamos o `gulp.run` para rodar as tarefas
-// E usamos o `gulp.watch` para o Gulp esperar mudanças nos arquivos para rodar novamente
+// We use `gulp.run` to run the tasks
+// And we use `gulp.watch` for Gulp to expect changes in the files to run again
   gulp.run('minify-css');
   gulp.watch('./styles/*.css', function(evt) {
   gulp.run('minify-css');
