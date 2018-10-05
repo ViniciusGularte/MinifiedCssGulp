@@ -5,7 +5,7 @@ Using gulp to minify my css files :tropical_drink:
 
 With the npm package manager installed enter:
 
-> npm install gulp
+> npm install --save-dev gulp
 
 
 Shortly afterward within the base project installs the gulp dependency to minify CSS files
