@@ -13,10 +13,9 @@ gulp.task('minify-css', () => {
 
 //We create a 'default' task that will run when we run `gulp` in the project
 gulp.task('default', function() {
-// We use `gulp.run` to run the tasks
-// And we use `gulp.watch` for Gulp to expect changes in the files to run again
-  gulp.run('minify-css');
+// We use `gulp.watch` for Gulp to expect changes in the files to run again
   gulp.watch('./styles/*.css', function(evt) {
-  gulp.run('minify-css');
+  gulp.task('minify-css');
   });
 });
+
